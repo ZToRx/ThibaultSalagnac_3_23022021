@@ -13,5 +13,145 @@
     <link rel="stylesheet" href="./public/styles.css" />
     <title>OhMyFood! Paris - À la française</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="fa fa-arrow-left" aria-hidden="true"></div>
+      <img
+        class="logo"
+        src="./images/logo/ohmyfood.png"
+        alt="logo de OhMyFood"
+      />
+    </header>
+    <section>
+      <img
+        src="./images/restaurants/a_la_francaise.jpg"
+        alt="plat dans une petite assiette"
+        class="showcase"
+      />
+      <form method="post" action="traitement.php">
+        <div class="heading">
+          <h1 class="heading__title">À la française</h1>
+          <span>heart</span>
+        </div>
+        <div class="starter">
+          <h2 class="starter__title">Entrées</h2>
+          <div class="starter__card">
+            <div class="starter__desc">
+              <span class="starter__desc__name">Tartare de poulpe acidulé</span>
+              <span class="starter__desc__spec">Aux zestes d'orange</span>
+            </div>
+            <div class="starter__price">25€</div>
+          </div>
+          <div class="starter__card">
+            <div class="starter__desc">
+              <span class="starter__desc__name"
+                >Velouté de légumes d'antan</span
+              >
+              <span class="starter__desc__spec"
+                >Carotte, panais, topinambour</span
+              >
+            </div>
+            <div class="starter__price">35€</div>
+          </div>
+          <div>
+            <div class="starter__desc">
+              <span class="starter__desc__name">Soupe à l'oignon</span>
+              <span class="starter__desc__spec">Revisitée</span>
+            </div>
+            <div class="starter__price">20€</div>
+          </div>
+        </div>
+        <div class="main_course">
+          <h2 class="main_course__title">Plats</h2>
+          <div class="main_course__card">
+            <div class="main_course__desc">
+              <span class="main_course__desc__name"
+                >Coquilles Saint-Jacques</span
+              >
+              <span class="main_course__desc__spec"
+                >Accompagnées d'une purée de panais</span
+              >
+            </div>
+            <div class="main_course__price">40€</div>
+          </div>
+          <div class="main_course__card">
+            <div class="main_course__desc">
+              <span class="main_course__desc__name">Magret de canard</span>
+              <span class="main_course__desc__spec"
+                >Et parmentier de pommes de terre</span
+              >
+            </div>
+            <div class="main_course__price">35€</div>
+          </div>
+          <div class="main_course__card">
+            <div class="main_course__desc">
+              <span class="main_course__desc__name"
+                >Pigeonneau d’Ille-et-Vilaine</span
+              >
+              <span class="main_course__desc__spec"
+                >Sur son lit de gnocchis aux légumes</span
+              >
+            </div>
+            <div class="main_course__price">44€</div>
+          </div>
+        </div>
+        <div class="dessert">
+          <h2 class="dessert__title">Desserts</h2>
+          <div class="dessert__card">
+            <div class="dessert__desc">
+              <span class="dessert__desc__name"
+                >Pétales de violettes glacés</span
+              >
+              <span class="dessert__desc__spec">Et purée de noisettes</span>
+            </div>
+            <div class="desert__price">18€</div>
+          </div>
+          <div class="dessert__card">
+            <div class="dessert__desc">
+              <span class="dessert__desc__name">Fondant au chocolat</span>
+              <span class="dessert__desc__spec">Revisité</span>
+            </div>
+            <div class="dessert__price">22€</div>
+          </div>
+          <div class="desert__card">
+            <div class="dessert__desc">
+              <span class="dessert__desc__name">Millefeuille croustillant</span>
+              <span class="dessert__desc__spec"
+                >Myrtilles et pâte d’amande</span
+              >
+            </div>
+            <div class="dessert__price">23€</div>
+          </div>
+        </div>
+        <input class="btn btn__order" type="submit" value="Commander" />
+      </form>
+    </section>
+    <footer>
+      <img
+        class="logo logo--small"
+        src="./images/logo/ohmyfood.png"
+        alt="logo de OhMyFood en petit"
+      />
+      <ul>
+        <li>
+          <a href="#"
+            ><span class="fa fa-cutlery" aria-hidden="true"></span>Proposer un
+            restaurant</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><span class="fa fa-handshake-o" aria-hidden="true"></span>Devenir
+            partenaire</a
+          >
+        </li>
+        <li>
+          <a href="#">Mentions légales</a>
+        </li>
+        <li>
+          <a href="mailto:#">Contact</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>
