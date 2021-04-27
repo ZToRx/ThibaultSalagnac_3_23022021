@@ -283,17 +283,57 @@ footer .fa-handshake-o {
 .link {
   background-color: #f0f0f0;
   margin-top: 55px;
-  padding: 60px 20px 40px 20px;
+  padding: 60px 0px 40px 0px;
 }
 .link__title {
   font-size: 26px;
   font-weight: bold;
+  padding-left: 20px;
+  padding-bottom: 5px;
 }
 
 .card {
   display: flex;
+  flex-direction: column;
   border-radius: 20px;
   background-color: white;
+  margin: 20px;
+  height: 250px;
+  text-decoration: none;
+  color: black;
+}
+.card__pic {
+  display: block;
+  object-fit: cover;
+  height: 70%;
+  border-radius: 20px 20px 0 0;
+}
+.card__pic--new {
+  position: absolute;
+  background-color: #98e2cf;
+  font-size: 15px;
+  font-weight: bold;
+  color: #5b887c;
+  padding: 8px 10px 6px 10px;
+  margin-top: 15px;
+  margin-left: 60vw;
+  border-radius: 2px;
+}
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.card__title {
+  font-weight: bold;
+  padding-bottom: 7px;
+}
+.card .fa-heart-o {
+  padding: 10px;
+  font-size: 25px;
+}
+.card .fa-heart-o:hover {
+  background: linear-gradient(#9256dc, #ff7ad9);
 }
 
 /*# sourceMappingURL=style.css.map */

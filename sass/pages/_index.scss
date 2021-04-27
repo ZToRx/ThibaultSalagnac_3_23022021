@@ -83,27 +83,55 @@
 .link {
   background-color: shade($color-white, 6);
   margin-top: 55px;
-  padding: 60px 20px 40px 20px;
+  padding: 60px 0px 40px 0px;
   &__title {
     font-size: 26px;
     font-weight: bold;
+    padding-left: 20px;
+    padding-bottom: 5px;
   }
 }
 
 .card {
   display: flex;
+  flex-direction: column;
   border-radius: 20px;
   background-color: $color-white;
+  margin: 20px;
+  height: 250px;
+  text-decoration: none;
+  color: black;
   &__pic {
+    display: block;
+    object-fit: cover;
+    height: 70%;
+    border-radius: 20px 20px 0 0;
     &--new {
+      position: absolute;
+      background-color: $color-tertiary;
+      font-size: 15px;
+      font-weight: bold;
+      color: shade($color-tertiary, 40);
+      padding: 8px 10px 6px 10px;
+      margin-top: 15px;
+      margin-left: 60vw;
+      border-radius: 2px;
     }
   }
   &__footer {
-  }
-  &__txt {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
   }
   &__title {
+    font-weight: bold;
+    padding-bottom: 7px;
   }
-  &__pos {
+  & .fa-heart-o {
+    padding: 10px;
+    font-size: 25px;
+    &:hover {
+      background: linear-gradient($color-primary, $color-secondary);
+    }
   }
 }
