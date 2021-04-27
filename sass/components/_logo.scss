@@ -1,8 +1,9 @@
 .logo {
-  width: 40vw;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  width: 43vw;
+  padding-top: 19px;
+  padding-bottom: 10px;
   &--small {
-    width: 20vw;
+    width: 30vw;
+    filter: invert(1);
   }
 }
