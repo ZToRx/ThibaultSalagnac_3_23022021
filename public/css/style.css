@@ -153,6 +153,7 @@ img {
 }
 
 .btn {
+  position: relative;
   font-size: 14px;
   font-weight: bold;
   border-radius: 50px;
@@ -161,6 +162,23 @@ img {
   background: linear-gradient(to top left, #9256dc, 50%, #ff7ad9);
   padding: 15px 20px 15px 20px;
   box-shadow: 0px 2px 4px #a1a1a1;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "Explorer nos restaurants";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50px;
+  padding: 15px 20px 15px 20px;
+  box-shadow: 0px 2px 4px #949494;
+  background: linear-gradient(to top left, #9d67e0, 50%, #ff87dd);
+  opacity: 0;
+  transition: opacity 200ms;
 }
 
 header {
@@ -228,6 +246,7 @@ footer .fa-handshake-o {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 @keyframes preloader {
