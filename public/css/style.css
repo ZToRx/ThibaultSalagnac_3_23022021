@@ -198,6 +198,46 @@ footer .fa-handshake-o {
   padding-right: 10px;
 }
 
+.loadingscreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1001;
+  background: #fff;
+  animation: whitescreen 3000ms forwards;
+}
+.loadingscreen .preloader {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #9256dc transparent #9256dc transparent;
+  animation: preloader 1000ms linear 3;
+}
+
+@keyframes whitescreen {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .infoposition {
   height: 30px;
   text-align: center;
