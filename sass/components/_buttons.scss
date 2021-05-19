@@ -1,0 +1,27 @@
+.btn {
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50px;
+  border-style: none;
+  color: $color-white;
+  background: linear-gradient(
+    to top left,
+    $color-primary,
+    50%,
+    $color-secondary
+  );
+  padding: 15px 20px 15px 20px;
+  box-shadow: 0px 2px 4px shade($color-white, 37);
+  transition: opacity 200ms;
+  &:hover,
+  :active {
+    box-shadow: 0px 2px 4px shade($color-white, 42);
+    background: linear-gradient(
+      to top left,
+      tint($color-primary, 10),
+      50%,
+      tint($color-secondary, 10)
+    );
+  }
+}

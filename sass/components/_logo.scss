@@ -1,0 +1,9 @@
+.logo {
+  width: 10em;
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+  &--small {
+    width: 5em;
+    filter: invert(1);
+  }
+}

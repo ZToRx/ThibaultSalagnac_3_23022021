@@ -1,0 +1,21 @@
+footer {
+  background-color: shade($color-white, 80);
+  height: 200px;
+  padding-left: 20px;
+  padding-top: 10px;
+  & li {
+    font-size: 16px;
+    padding-top: 12px;
+  }
+  & a {
+    text-decoration: none;
+    color: $color-white;
+  }
+  & .fa-cutlery {
+    padding-right: 15px;
+    padding-left: 4px;
+  }
+  & .fa-hands-helping {
+    padding-right: 12px;
+  }
+}

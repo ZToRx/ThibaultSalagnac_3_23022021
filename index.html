@@ -9,24 +9,28 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./public/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/188897625e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./public/css/style.css" />
     <title>OhMyFood! Paris</title>
   </head>
   <body>
+    <div class="loadingscreen">
+      <div class="preloader"></div>
+    </div>
     <header>
       <img
         class="logo"
-        src="./images/logo/ohmyfood.png"
+        src="./public/img/logo/ohmyfood.png"
         alt="logo de OhMyFood"
       />
     </header>
     <main>
       <div id="infoposition" class="infoposition">
-        <span class="infoposition__name"
-          ><span class="fa fa-map-marker" aria-hidden="true"></span
-          >Paris,Belleville</span
-        >
+        <span class="fas fa-map-marker-alt" aria-hidden="true"></span
+        ><span class="infoposition__name">Paris,Belleville</span>
       </div>
       <section class="intro">
         <div class="catch">
@@ -35,14 +39,14 @@
             vous convient
           </h1>
           <p class="catch__txt">
-            Découvrez des restaurants d'exeption,<br />séléctionnés pas nos
+            Découvrez des restaurants d'exception,<br />séléctionnés pas nos
             soins.
           </p>
           <!-- CHANGER L'ADRESSE A LA MISE EN LIGNE-->
           <button
             class="btn btn__anchor"
             type="button"
-            onclick="window.location.href='./preindex.html#restaurants'"
+            onclick="window.location.href='./index.html#restaurants'"
           >
             Explorer nos restaurants
           </button>
@@ -52,8 +56,8 @@
           <ol>
             <li class="op__item">
               <span class="op__nbr">1</span>
-              <span class="fa fa-mobile" aria-hidden="true"></span>
-              choisissez un restaurant
+              <span class="fas fa-mobile-alt" aria-hidden="true"></span>
+              Choisissez un restaurant
             </li>
             <li class="op__item">
               <span class="op__nbr">2</span>
@@ -63,7 +67,7 @@
 
             <li class="op__item op__item--plain">
               <span class="op__nbr">3</span>
-              <span class="fa fa-cutlery" aria-hidden="true"></span>
+              <span class="fas fa-store" aria-hidden="true"></span>
               Dégustez au restaurant
             </li>
           </ol>
@@ -71,9 +75,10 @@
       </section>
       <section id="restaurants" class="link">
         <h2 class="link__title">Restaurants</h2>
-        <div class="card">
+        <a class="card" href="#">
           <img
-            src="./images/restaurants/la_palette_du_gout.jpg"
+            class="card__pic"
+            src="./public/img/restaurants/la_palette_du_gout.jpg"
             alt="plat dans une grande assiette"
           />
           <span class="card__pic--new">Nouveau</span>
@@ -82,12 +87,15 @@
               <h3 class="card__title">La palette du goût</h3>
               <small class="card__pos">Ménilmontant</small>
             </div>
-            <div>heart</div>
+            <div class="fa fa-heart-o">
+              <div class="fa fa-heart"></div>
+            </div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a class="card" href="#">
           <img
-            src="./images/restaurants/la_note_enchantee.jpg"
+            class="card__pic"
+            src="./public/img/restaurants/la_note_enchantee.jpg"
             alt="plat de viande dans une assiette"
           />
           <span class="card__pic--new">Nouveau</span>
@@ -96,43 +104,49 @@
               <h3 class="card__title">La note enchantée</h3>
               <small class="card__pos">Charonne</small>
             </div>
-            <div>heart</div>
+            <div class="fa fa-heart-o">
+              <div class="fa fa-heart"></div>
+            </div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a class="card" href="#">
           <img
-            src="./images/restaurants/a_la_francaise.jpg"
+            class="card__pic"
+            src="./public/img/restaurants/a_la_francaise.jpg"
             alt="plat dans une petite assiette"
           />
-          <span class="card__pic--new">Nouveau</span>
           <div class="card__footer">
             <div class="card__txt">
               <h3 class="card__title">À la française</h3>
               <small class="card__pos">Cité Rouge</small>
             </div>
-            <div>heart</div>
+            <div class="fa fa-heart-o">
+              <div class="fa fa-heart"></div>
+            </div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a class="card" href="#">
           <img
-            src="./images/restaurants/le_delice_des_sens.jpg"
+            class="card__pic"
+            src="./public/img/restaurants/le_delice_des_sens.jpg"
             alt="plat de poisson dans une assiette longue"
           />
-          <span class="card__pic--new">Nouveau</span>
           <div class="card__footer">
             <div class="card__txt">
               <h3 class="card__title">Le délice des sens</h3>
               <small class="card__pos">Folie-Méricourt</small>
             </div>
-            <div>heart</div>
+            <div class="fa fa-heart-o">
+              <div class="fa fa-heart"></div>
+            </div>
           </div>
-        </div>
+        </a>
       </section>
     </main>
     <footer>
       <img
         class="logo logo--small"
-        src="./images/logo/ohmyfood.png"
+        src="./public/img/logo/ohmyfood.png"
         alt="logo de OhMyFood en petit"
       />
       <ul>
@@ -144,15 +158,15 @@
         </li>
         <li>
           <a href="#"
-            ><span class="fa fa-handshake-o" aria-hidden="true"></span>Devenir
-            partenaire</a
+            ><span class="fas fa-hands-helping" aria-hidden="true"></span
+            >Devenir partenaire</a
           >
         </li>
         <li>
           <a href="#">Mentions légales</a>
         </li>
         <li>
-          <a href="mailto:#">Contact</a>
+          <a href="mailto:contact@ohmyfood.fr">Contact</a>
         </li>
       </ul>
     </footer>
