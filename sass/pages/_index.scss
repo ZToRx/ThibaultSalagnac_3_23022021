@@ -54,10 +54,6 @@
   }
 }
 
-.fa-map-marker {
-  font-size: 18px;
-}
-
 .intro {
   height: 600px;
 }
@@ -80,23 +76,28 @@
 
 .op {
   padding: 40px 20px 0px 20px;
-  .fa {
+  .fa,
+  .fas {
     padding-right: 20px;
+    color: shade($color-white, 50);
   }
-  .fa-mobile {
-    font-size: 26px;
+  .fa-mobile-alt {
+    font-size: 20px;
+    padding-right: 23px;
+    padding-left: 3px;
   }
   .fa-list-ul {
     font-size: 20px;
   }
-  .fa-cutlery {
+  .fa-store {
     font-size: 20px;
     color: $color-primary;
+    padding-right: 16px;
   }
   &__title {
     font-size: 22px;
     font-weight: bold;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
   }
   &__item {
     border-style: none;
@@ -138,6 +139,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
   border-radius: 20px;
   background-color: $color-white;
   margin: 20px;
@@ -151,13 +153,14 @@
     border-radius: 20px 20px 0 0;
     &--new {
       position: absolute;
+      right: 2vh;
+      top: 4vw;
+      z-index: 2;
       background-color: $color-tertiary;
       font-size: 15px;
       font-weight: bold;
       color: shade($color-tertiary, 40);
       padding: 8px 10px 6px 10px;
-      margin-top: 15px;
-      margin-left: 60vw;
       border-radius: 2px;
     }
   }
@@ -171,10 +174,37 @@
     padding-bottom: 7px;
   }
   & .fa-heart-o {
+    position: relative;
+    color: shade($color-white, 66);
     padding: 10px;
-    font-size: 25px;
-    &:hover {
-      background: linear-gradient($color-primary, $color-secondary);
+    font-size: 24px;
+    &:hover,
+    :active,
+    :visited {
+      & .fa-heart {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
+  }
+  & .fa-heart {
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    z-index: 2;
+    font-size: 26px;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(
+      to top,
+      tint($color-secondary, 10),
+      50%,
+      tint($color-primary, 10)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 200ms ease-in-out, opacity 200ms;
   }
 }
