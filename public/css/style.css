@@ -492,6 +492,16 @@ form input {
   border-radius: 15px;
   box-shadow: 2px 3px 10px #d6d6d6;
 }
+.starter__card:hover div div,
+.main_course__card:hover div div,
+.dessert__card:hover div div {
+  transform: translate(-64px, 0);
+}
+.starter__card:hover div div .fa-check-circle,
+.main_course__card:hover div div .fa-check-circle,
+.dessert__card:hover div div .fa-check-circle {
+  transform: rotate(360deg);
+}
 .starter__desc,
 .main_course__desc,
 .dessert__desc {
@@ -542,15 +552,17 @@ form input {
   display: flex;
   background: #98e2cf;
   color: white;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 64px;
   height: 64px;
+  transition: transform 400ms ease-in-out;
 }
 .starter__checkbox .fa-check-circle,
 .main_course__checkbox .fa-check-circle,
 .dessert__checkbox .fa-check-circle {
   font-size: 22px;
+  transition: transform 800ms;
 }
 
 /*# sourceMappingURL=style.css.map */

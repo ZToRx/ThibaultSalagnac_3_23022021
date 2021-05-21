@@ -83,6 +83,12 @@ form {
     background: $color-white;
     border-radius: 15px;
     box-shadow: 2px 3px 10px shade($color-white, 16);
+    &:hover div div {
+      transform: translate(-64px, 0);
+      & .fa-check-circle {
+        transform: rotate(360deg);
+      }
+    }
   }
   &__desc {
     display: flex;
@@ -122,12 +128,14 @@ form {
     display: flex;
     background: $color-tertiary;
     color: $color-white;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 64px;
     height: 64px;
+    transition: transform 400ms ease-in-out;
     & .fa-check-circle {
       font-size: 22px;
+      transition: transform 800ms;
     }
   }
 }
