@@ -492,14 +492,14 @@ form input {
   border-radius: 15px;
   box-shadow: 2px 3px 10px #d6d6d6;
 }
-.starter__card:hover div div,
-.main_course__card:hover div div,
-.dessert__card:hover div div {
+.starter__card:hover > div + div,
+.main_course__card:hover > div + div,
+.dessert__card:hover > div + div {
   transform: translate(-64px, 0);
 }
-.starter__card:hover div div .fa-check-circle,
-.main_course__card:hover div div .fa-check-circle,
-.dessert__card:hover div div .fa-check-circle {
+.starter__card:hover > div + div .fa-check-circle,
+.main_course__card:hover > div + div .fa-check-circle,
+.dessert__card:hover > div + div .fa-check-circle {
   transform: rotate(360deg);
 }
 .starter__desc,
@@ -537,6 +537,7 @@ form input {
   display: flex;
   position: relative;
   right: -64px;
+  transition: transform 400ms ease-in-out;
 }
 .starter__price,
 .main_course__price,
@@ -556,7 +557,6 @@ form input {
   justify-content: center;
   width: 64px;
   height: 64px;
-  transition: transform 400ms ease-in-out;
 }
 .starter__checkbox .fa-check-circle,
 .main_course__checkbox .fa-check-circle,
