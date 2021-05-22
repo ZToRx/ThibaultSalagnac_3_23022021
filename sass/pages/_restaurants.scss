@@ -10,11 +10,15 @@ form {
   border-radius: 30px 30px 0 0;
   background: shade($color-white, 8);
   padding: 15px;
-  input {
+  & .bypass {
     align-self: center;
-    width: 40vw;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+    & input {
+      width: 40vw;
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -78,6 +82,7 @@ form {
     display: flex;
     cursor: pointer;
     overflow: hidden;
+    opacity: 0;
     height: 64px;
     margin-top: 15px;
     background: $color-white;
@@ -137,5 +142,22 @@ form {
       font-size: 22px;
       transition: transform 800ms;
     }
+  }
+}
+
+@for $i from 1 through 10 {
+  .animation-#{$i} {
+    animation: card-in 800ms 350ms * $i ease-out forwards;
+  }
+}
+
+@keyframes card-in {
+  0% {
+    opacity: 0.1;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

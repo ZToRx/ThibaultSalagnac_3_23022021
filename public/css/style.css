@@ -422,8 +422,12 @@ form {
   background: #ebebeb;
   padding: 15px;
 }
-form input {
+form .bypass {
   align-self: center;
+  text-align: center;
+  width: 100%;
+}
+form .bypass input {
   width: 40vw;
   margin-top: 50px;
   margin-bottom: 40px;
@@ -486,6 +490,7 @@ form input {
   display: flex;
   cursor: pointer;
   overflow: hidden;
+  opacity: 0;
   height: 64px;
   margin-top: 15px;
   background: white;
@@ -563,6 +568,57 @@ form input {
 .dessert__checkbox .fa-check-circle {
   font-size: 22px;
   transition: transform 800ms;
+}
+
+.animation-1 {
+  animation: card-in 800ms 350ms ease-out forwards;
+}
+
+.animation-2 {
+  animation: card-in 800ms 700ms ease-out forwards;
+}
+
+.animation-3 {
+  animation: card-in 800ms 1050ms ease-out forwards;
+}
+
+.animation-4 {
+  animation: card-in 800ms 1400ms ease-out forwards;
+}
+
+.animation-5 {
+  animation: card-in 800ms 1750ms ease-out forwards;
+}
+
+.animation-6 {
+  animation: card-in 800ms 2100ms ease-out forwards;
+}
+
+.animation-7 {
+  animation: card-in 800ms 2450ms ease-out forwards;
+}
+
+.animation-8 {
+  animation: card-in 800ms 2800ms ease-out forwards;
+}
+
+.animation-9 {
+  animation: card-in 800ms 3150ms ease-out forwards;
+}
+
+.animation-10 {
+  animation: card-in 800ms 3500ms ease-out forwards;
+}
+
+@keyframes card-in {
+  0% {
+    opacity: 0.1;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
