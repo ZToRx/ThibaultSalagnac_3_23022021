@@ -401,12 +401,222 @@ footer .fa-hands-helping {
   font-size: 26px;
   color: rgba(0, 0, 0, 0);
   background-image: linear-gradient(to top, #ff87dd, 50%, #9d67e0);
-  background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   opacity: 0;
   transform: scale(0);
   transition: transform 200ms ease-in-out, opacity 200ms;
+}
+
+section {
+  background: #ebebeb;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -45px;
+  border-radius: 30px 30px 0 0;
+  background: #ebebeb;
+  padding: 15px;
+}
+form .bypass {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+form .bypass input {
+  width: 40vw;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Shrikhand", "Arial", sans-serif;
+  font-size: 26px;
+  padding-top: 15px;
+}
+.heading .fa-heart-o {
+  position: relative;
+  color: #707070;
+  padding: 10px;
+  font-size: 24px;
+}
+.heading .fa-heart-o:hover .fa-heart,
+.heading .fa-heart-o :active .fa-heart,
+.heading .fa-heart-o :visited .fa-heart {
+  opacity: 1;
+  transform: scale(1);
+}
+.heading .fa-heart {
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  z-index: 2;
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(to top, #ff87dd, 50%, #9d67e0);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 200ms ease-in-out, opacity 200ms;
+}
+
+.starter__title,
+.main_course__title,
+.dessert__title {
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  color: #4d4d4d;
+}
+.starter__underline,
+.main_course__underline,
+.dessert__underline {
+  background-color: #98e2cf;
+  height: 3px;
+  width: 46px;
+}
+.starter__card,
+.main_course__card,
+.dessert__card {
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  height: 64px;
+  margin-top: 15px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 2px 3px 10px #d6d6d6;
+}
+.starter__card:hover > div + div,
+.main_course__card:hover > div + div,
+.dessert__card:hover > div + div {
+  transform: translate(-64px, 0);
+}
+.starter__card:hover > div + div .fa-check-circle,
+.main_course__card:hover > div + div .fa-check-circle,
+.dessert__card:hover > div + div .fa-check-circle {
+  transform: rotate(360deg);
+}
+.starter__desc,
+.main_course__desc,
+.dessert__desc {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.starter__desc__name,
+.main_course__desc__name,
+.dessert__desc__name {
+  white-space: nowrap;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.starter__desc__spec,
+.main_course__desc__spec,
+.dessert__desc__spec {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-top: 8px;
+  color: #4d4d4d;
+}
+.starter__animation,
+.main_course__animation,
+.dessert__animation {
+  display: flex;
+  position: relative;
+  right: -64px;
+  transition: transform 400ms ease-in-out;
+}
+.starter__price,
+.main_course__price,
+.dessert__price {
+  align-self: flex-end;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+.starter__checkbox,
+.main_course__checkbox,
+.dessert__checkbox {
+  display: flex;
+  background: #98e2cf;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+}
+.starter__checkbox .fa-check-circle,
+.main_course__checkbox .fa-check-circle,
+.dessert__checkbox .fa-check-circle {
+  font-size: 22px;
+  transition: transform 800ms;
+}
+
+.animation-1 {
+  animation: card-in 800ms 350ms ease-out forwards;
+}
+
+.animation-2 {
+  animation: card-in 800ms 700ms ease-out forwards;
+}
+
+.animation-3 {
+  animation: card-in 800ms 1050ms ease-out forwards;
+}
+
+.animation-4 {
+  animation: card-in 800ms 1400ms ease-out forwards;
+}
+
+.animation-5 {
+  animation: card-in 800ms 1750ms ease-out forwards;
+}
+
+.animation-6 {
+  animation: card-in 800ms 2100ms ease-out forwards;
+}
+
+.animation-7 {
+  animation: card-in 800ms 2450ms ease-out forwards;
+}
+
+.animation-8 {
+  animation: card-in 800ms 2800ms ease-out forwards;
+}
+
+.animation-9 {
+  animation: card-in 800ms 3150ms ease-out forwards;
+}
+
+.animation-10 {
+  animation: card-in 800ms 3500ms ease-out forwards;
+}
+
+@keyframes card-in {
+  0% {
+    opacity: 0.1;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
