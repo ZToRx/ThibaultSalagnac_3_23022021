@@ -401,7 +401,6 @@ footer .fa-hands-helping {
   font-size: 26px;
   color: rgba(0, 0, 0, 0);
   background-image: linear-gradient(to top, #ff87dd, 50%, #9d67e0);
-  background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   opacity: 0;
@@ -461,7 +460,6 @@ form .bypass input {
   font-size: 26px;
   color: rgba(0, 0, 0, 0);
   background-image: linear-gradient(to top, #ff87dd, 50%, #9d67e0);
-  background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   opacity: 0;
