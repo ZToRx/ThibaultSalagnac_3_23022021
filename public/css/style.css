@@ -136,11 +136,6 @@ body {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
 }
-@media screen and (min-width: ) {
-  body {
-    font-size: 22px;
-  }
-}
 
 .logo {
   width: 10em;
@@ -213,7 +208,7 @@ footer .fa-hands-helping {
   padding-right: 12px;
 }
 
-/*.loadingscreen {
+.loadingscreen {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,17 +218,17 @@ footer .fa-hands-helping {
   z-index: 1001;
   background: #fff;
   animation: whitescreen 3000ms forwards;
-
-  .preloader {
-    display: block;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 6px solid #fff;
-    border-color: $color-primary transparent $color-primary transparent;
-    animation: preloader 1000ms linear 3;
-  }
 }
+.loadingscreen .preloader {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #9256dc transparent #9256dc transparent;
+  animation: preloader 1000ms linear 3;
+}
+
 @keyframes whitescreen {
   0% {
     opacity: 1;
@@ -246,7 +241,6 @@ footer .fa-hands-helping {
     z-index: -1;
   }
 }
-
 @keyframes preloader {
   0% {
     transform: rotate(0deg);
@@ -254,7 +248,7 @@ footer .fa-hands-helping {
   100% {
     transform: rotate(360deg);
   }
-}*/
+}
 .infoposition {
   height: 30px;
   text-align: center;
@@ -456,6 +450,9 @@ footer .fa-hands-helping {
 section {
   background: #ebebeb;
 }
+section img {
+  width: 100%;
+}
 
 form {
   display: flex;
@@ -466,7 +463,15 @@ form {
   background: #ebebeb;
   padding: 15px;
 }
+@media screen and (min-width: 1440px) {
+  form {
+    display: grid;
+    grid-template: 59px 1fr 136px/1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+}
 form .bypass {
+  grid-column: 1/4;
   align-self: center;
   text-align: center;
   width: 100%;
@@ -479,6 +484,7 @@ form .bypass input {
 
 .heading {
   display: flex;
+  grid-column: 1/4;
   justify-content: space-between;
   align-items: center;
   font-family: "Shrikhand", "Arial", sans-serif;
@@ -543,7 +549,15 @@ form .bypass input {
 .starter__card:hover > div + div,
 .main_course__card:hover > div + div,
 .dessert__card:hover > div + div {
+  position: relative;
   transform: translate(-64px, 0);
+}
+@media screen and (min-width: 768px) {
+  .starter__card:hover > div + div,
+.main_course__card:hover > div + div,
+.dessert__card:hover > div + div {
+    position: absolute;
+  }
 }
 .starter__card:hover > div + div .fa-check-circle,
 .main_course__card:hover > div + div .fa-check-circle,
@@ -556,34 +570,39 @@ form .bypass input {
   display: flex;
   flex-direction: column;
   padding: 10px 0 10px 10px;
+  width: 80%;
+  display: flow-root;
+  overflow: clip;
+  font-weight: bold;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
 }
 .starter__desc__name,
 .main_course__desc__name,
 .dessert__desc__name {
-  white-space: nowrap;
+  display: flow-root;
+  overflow: clip;
   font-weight: bold;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 .starter__desc__spec,
 .main_course__desc__spec,
 .dessert__desc__spec {
-  overflow: hidden;
-  white-space: nowrap;
+  display: flow-root;
+  overflow: clip;
+  font-weight: bold;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 300;
   padding-top: 8px;
-  color: #4d4d4d;
+  font-size: 16px;
 }
 .starter__animation,
 .main_course__animation,
 .dessert__animation {
   display: flex;
-  position: relative;
+  position: absolute;
   right: -64px;
   transition: transform 400ms ease-in-out;
 }
@@ -591,7 +610,7 @@ form .bypass input {
 .main_course__price,
 .dessert__price {
   align-self: flex-end;
-  font-weight: bold;
+  font-weight: normal;
   padding-bottom: 10px;
   padding-right: 10px;
 }
@@ -614,46 +633,46 @@ form .bypass input {
 }
 
 .animation-1 {
-  animation: card-in 800ms 350ms ease-out forwards;
+  animation: arise 800ms 350ms ease-out forwards;
 }
 
 .animation-2 {
-  animation: card-in 800ms 700ms ease-out forwards;
+  animation: arise 800ms 700ms ease-out forwards;
 }
 
 .animation-3 {
-  animation: card-in 800ms 1050ms ease-out forwards;
+  animation: arise 800ms 1050ms ease-out forwards;
 }
 
 .animation-4 {
-  animation: card-in 800ms 1400ms ease-out forwards;
+  animation: arise 800ms 1400ms ease-out forwards;
 }
 
 .animation-5 {
-  animation: card-in 800ms 1750ms ease-out forwards;
+  animation: arise 800ms 1750ms ease-out forwards;
 }
 
 .animation-6 {
-  animation: card-in 800ms 2100ms ease-out forwards;
+  animation: arise 800ms 2100ms ease-out forwards;
 }
 
 .animation-7 {
-  animation: card-in 800ms 2450ms ease-out forwards;
+  animation: arise 800ms 2450ms ease-out forwards;
 }
 
 .animation-8 {
-  animation: card-in 800ms 2800ms ease-out forwards;
+  animation: arise 800ms 2800ms ease-out forwards;
 }
 
 .animation-9 {
-  animation: card-in 800ms 3150ms ease-out forwards;
+  animation: arise 800ms 3150ms ease-out forwards;
 }
 
 .animation-10 {
-  animation: card-in 800ms 3500ms ease-out forwards;
+  animation: arise 800ms 3500ms ease-out forwards;
 }
 
-@keyframes card-in {
+@keyframes arise {
   0% {
     opacity: 0.1;
     transform: translateY(15px);

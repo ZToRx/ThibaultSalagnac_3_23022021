@@ -1,7 +1,4 @@
 body {
   font-family: $font-stack;
   font-size: 18px;
-  @include responsive-to(xl) {
-    font-size: 22px;
-  }
 }

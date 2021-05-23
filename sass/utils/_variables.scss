@@ -8,6 +8,14 @@ $font-stack: ("Roboto", "Arial", sans-serif);
 
 $font-stack-title: ("Shrikhand", "Arial", sans-serif);
 
+@mixin ellipsis {
+  display: flow-root;
+  overflow: clip;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 $breakpoints: (
   "xs": 425px,
   "s": 768px,
