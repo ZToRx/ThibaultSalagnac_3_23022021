@@ -136,6 +136,11 @@ body {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
 }
+@media screen and (min-width: ) {
+  body {
+    font-size: 22px;
+  }
+}
 
 .logo {
   width: 10em;
@@ -183,6 +188,7 @@ header {
   left: 5vw;
   padding-top: 3.8vh;
   color: #4d4d4d;
+  text-decoration: none;
 }
 
 footer {
@@ -207,7 +213,7 @@ footer .fa-hands-helping {
   padding-right: 12px;
 }
 
-.loadingscreen {
+/*.loadingscreen {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,17 +223,17 @@ footer .fa-hands-helping {
   z-index: 1001;
   background: #fff;
   animation: whitescreen 3000ms forwards;
-}
-.loadingscreen .preloader {
-  display: block;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 6px solid #fff;
-  border-color: #9256dc transparent #9256dc transparent;
-  animation: preloader 1000ms linear 3;
-}
 
+  .preloader {
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: $color-primary transparent $color-primary transparent;
+    animation: preloader 1000ms linear 3;
+  }
+}
 @keyframes whitescreen {
   0% {
     opacity: 1;
@@ -240,6 +246,7 @@ footer .fa-hands-helping {
     z-index: -1;
   }
 }
+
 @keyframes preloader {
   0% {
     transform: rotate(0deg);
@@ -247,7 +254,7 @@ footer .fa-hands-helping {
   100% {
     transform: rotate(360deg);
   }
-}
+}*/
 .infoposition {
   height: 30px;
   text-align: center;
@@ -259,10 +266,6 @@ footer .fa-hands-helping {
 }
 .infoposition__name {
   padding-left: 16px;
-}
-
-.intro {
-  height: 600px;
 }
 
 .catch {
@@ -283,6 +286,7 @@ footer .fa-hands-helping {
 
 .op {
   padding: 40px 20px 0px 20px;
+  background-color: white;
 }
 .op .fa,
 .op .fas {
@@ -302,21 +306,45 @@ footer .fa-hands-helping {
   color: #9256dc;
   padding-right: 16px;
 }
+.op ol {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .op ol {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .op__title {
   font-size: 22px;
   font-weight: bold;
   padding-bottom: 10px;
 }
 .op__item {
+  width: 90%;
   border-style: none;
   border-radius: 20px;
   box-shadow: 2px 3px 10px #d6d6d6;
-  padding: 24px 0px 24px 8px;
+  padding: 24px 8px 24px 8px;
   margin-top: 20px;
   margin-left: 10px;
   background-color: #f0f0f0;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 16px;
+}
+@media screen and (min-width: 425px) {
+  .op__item {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .op__item {
+    width: 270px;
+  }
 }
 .op__item--plain {
   background-color: #f4eefc;
@@ -336,11 +364,28 @@ footer .fa-hands-helping {
   margin-top: 55px;
   padding: 60px 0px 40px 0px;
 }
+@media screen and (min-width: 768px) {
+  .link {
+    display: grid;
+    grid-template: 31px 1fr 1fr/1fr 1fr;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .link {
+    grid-template: 31px 1fr/1fr 1fr 1fr 1fr;
+  }
+}
 .link__title {
+  grid-column: 1/3;
   font-size: 26px;
   font-weight: bold;
   padding-left: 20px;
   padding-bottom: 5px;
+}
+@media screen and (min-width: 1440px) {
+  .link__title {
+    grid-column: 1/5;
+  }
 }
 
 .card {
@@ -363,7 +408,7 @@ footer .fa-hands-helping {
 .card__pic--new {
   position: absolute;
   right: 2vh;
-  top: 4vw;
+  top: 24px;
   z-index: 2;
   background-color: #98e2cf;
   font-size: 15px;
