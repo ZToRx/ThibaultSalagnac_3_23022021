@@ -176,7 +176,6 @@ header {
   height: 10vh;
 }
 
-/* a modifier pour s'adapter a la taille de l'ecran*/
 .fa-arrow-left {
   position: absolute;
   font-size: 1.2em;
@@ -450,18 +449,44 @@ footer .fa-hands-helping {
 section {
   background: #ebebeb;
 }
-section img {
+section .showcase {
+  height: 40vh;
+  overflow: hidden;
+}
+section .showcase img {
+  position: relative;
   width: 100%;
+  object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  section .showcase img {
+    top: -100px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  section .showcase img {
+    top: -400px;
+  }
 }
 
 form {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: -45px;
+  top: -290px;
   border-radius: 30px 30px 0 0;
   background: #ebebeb;
   padding: 15px;
+}
+@media screen and (min-width: 425px) {
+  form {
+    top: -225px;
+  }
+}
+@media screen and (min-width: 768px) {
+  form {
+    top: -30px;
+  }
 }
 @media screen and (min-width: 1440px) {
   form {

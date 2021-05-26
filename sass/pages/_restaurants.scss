@@ -1,7 +1,19 @@
 section {
   background: shade($color-white, 8);
-  & img {
-    width: 100%;
+  & .showcase {
+    height: 40vh;
+    overflow: hidden;
+    & img {
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+      @include responsive-to(m) {
+        top: -100px;
+      }
+      @include responsive-to(l) {
+        top: -400px;
+      }
+    }
   }
 }
 
@@ -9,10 +21,16 @@ form {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: -45px;
+  top: -290px;
   border-radius: 30px 30px 0 0;
   background: shade($color-white, 8);
   padding: 15px;
+  @include responsive-to(xs){
+    top: -225px;
+  }
+  @include responsive-to(s) {
+    top: -30px;
+  }
   @include responsive-to(l) {
     display: grid;
     grid-template: 59px 1fr 136px / 1fr 1fr 1fr;
