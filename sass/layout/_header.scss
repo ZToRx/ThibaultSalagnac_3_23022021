@@ -3,11 +3,11 @@ header {
   text-align: center;
   height: 10vh;
 }
-/* a modifier pour s'adapter a la taille de l'ecran*/
 .fa-arrow-left {
   position: absolute;
   font-size: 1.2em;
   left: 5vw;
   padding-top: 3.8vh;
   color: shade($color-white, 70);
+  text-decoration: none;
 }

@@ -54,10 +54,6 @@
   }
 }
 
-.intro {
-  height: 600px;
-}
-
 .catch {
   text-align: center;
   background-color: shade($color-white, 6);
@@ -76,6 +72,7 @@
 
 .op {
   padding: 40px 20px 0px 20px;
+  background-color: $color-white;
   .fa,
   .fas {
     padding-right: 20px;
@@ -94,21 +91,41 @@
     color: $color-primary;
     padding-right: 16px;
   }
+  & ol {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    @include responsive-to(m) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
   &__title {
     font-size: 22px;
     font-weight: bold;
     padding-bottom: 10px;
   }
   &__item {
+    width: 90%;
     border-style: none;
     border-radius: 20px;
     box-shadow: 2px 3px 10px shade($color-white, 16);
-    padding: 24px 0px 24px 8px;
+    padding: 24px 8px 24px 8px;
     margin-top: 20px;
     margin-left: 10px;
     background-color: shade($color-white, 6);
     font-weight: bold;
-    font-size: 17px;
+    font-size: 16px;
+
+    @include responsive-to(xs) {
+      width: 320px;
+    }
+
+    @include responsive-to(m) {
+      width: 270px;
+    }
     &--plain {
       background-color: tint($color-primary, 90);
     }
@@ -128,7 +145,18 @@
   background-color: shade($color-white, 6);
   margin-top: 55px;
   padding: 60px 0px 40px 0px;
+  @include responsive-to(s) {
+    display: grid;
+    grid-template: 31px 1fr 1fr / 1fr 1fr;
+  }
+  @include responsive-to(l) {
+    grid-template: 31px 1fr / 1fr 1fr 1fr 1fr;
+  }
   &__title {
+    grid-column: 1 / 3;
+    @include responsive-to(l) {
+      grid-column: 1 / 5;
+    }
     font-size: 26px;
     font-weight: bold;
     padding-left: 20px;
@@ -154,7 +182,7 @@
     &--new {
       position: absolute;
       right: 2vh;
-      top: 4vw;
+      top: 24px;
       z-index: 2;
       background-color: $color-tertiary;
       font-size: 15px;

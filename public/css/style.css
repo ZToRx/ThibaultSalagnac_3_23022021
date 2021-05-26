@@ -176,13 +176,13 @@ header {
   height: 10vh;
 }
 
-/* a modifier pour s'adapter a la taille de l'ecran*/
 .fa-arrow-left {
   position: absolute;
   font-size: 1.2em;
   left: 5vw;
   padding-top: 3.8vh;
   color: #4d4d4d;
+  text-decoration: none;
 }
 
 footer {
@@ -261,10 +261,6 @@ footer .fa-hands-helping {
   padding-left: 16px;
 }
 
-.intro {
-  height: 600px;
-}
-
 .catch {
   text-align: center;
   background-color: #f0f0f0;
@@ -283,6 +279,7 @@ footer .fa-hands-helping {
 
 .op {
   padding: 40px 20px 0px 20px;
+  background-color: white;
 }
 .op .fa,
 .op .fas {
@@ -302,21 +299,45 @@ footer .fa-hands-helping {
   color: #9256dc;
   padding-right: 16px;
 }
+.op ol {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .op ol {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .op__title {
   font-size: 22px;
   font-weight: bold;
   padding-bottom: 10px;
 }
 .op__item {
+  width: 90%;
   border-style: none;
   border-radius: 20px;
   box-shadow: 2px 3px 10px #d6d6d6;
-  padding: 24px 0px 24px 8px;
+  padding: 24px 8px 24px 8px;
   margin-top: 20px;
   margin-left: 10px;
   background-color: #f0f0f0;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 16px;
+}
+@media screen and (min-width: 425px) {
+  .op__item {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .op__item {
+    width: 270px;
+  }
 }
 .op__item--plain {
   background-color: #f4eefc;
@@ -336,11 +357,28 @@ footer .fa-hands-helping {
   margin-top: 55px;
   padding: 60px 0px 40px 0px;
 }
+@media screen and (min-width: 768px) {
+  .link {
+    display: grid;
+    grid-template: 31px 1fr 1fr/1fr 1fr;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .link {
+    grid-template: 31px 1fr/1fr 1fr 1fr 1fr;
+  }
+}
 .link__title {
+  grid-column: 1/3;
   font-size: 26px;
   font-weight: bold;
   padding-left: 20px;
   padding-bottom: 5px;
+}
+@media screen and (min-width: 1440px) {
+  .link__title {
+    grid-column: 1/5;
+  }
 }
 
 .card {
@@ -363,7 +401,7 @@ footer .fa-hands-helping {
 .card__pic--new {
   position: absolute;
   right: 2vh;
-  top: 4vw;
+  top: 24px;
   z-index: 2;
   background-color: #98e2cf;
   font-size: 15px;
@@ -411,17 +449,54 @@ footer .fa-hands-helping {
 section {
   background: #ebebeb;
 }
+section .showcase {
+  height: 40vh;
+  overflow: hidden;
+}
+section .showcase img {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  section .showcase img {
+    top: -100px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  section .showcase img {
+    top: -400px;
+  }
+}
 
 form {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: -45px;
+  top: -290px;
   border-radius: 30px 30px 0 0;
   background: #ebebeb;
   padding: 15px;
 }
+@media screen and (min-width: 425px) {
+  form {
+    top: -225px;
+  }
+}
+@media screen and (min-width: 768px) {
+  form {
+    top: -30px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  form {
+    display: grid;
+    grid-template: 59px 1fr 136px/1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+}
 form .bypass {
+  grid-column: 1/4;
   align-self: center;
   text-align: center;
   width: 100%;
@@ -434,6 +509,7 @@ form .bypass input {
 
 .heading {
   display: flex;
+  grid-column: 1/4;
   justify-content: space-between;
   align-items: center;
   font-family: "Shrikhand", "Arial", sans-serif;
@@ -498,7 +574,15 @@ form .bypass input {
 .starter__card:hover > div + div,
 .main_course__card:hover > div + div,
 .dessert__card:hover > div + div {
+  position: relative;
   transform: translate(-64px, 0);
+}
+@media screen and (min-width: 768px) {
+  .starter__card:hover > div + div,
+.main_course__card:hover > div + div,
+.dessert__card:hover > div + div {
+    position: absolute;
+  }
 }
 .starter__card:hover > div + div .fa-check-circle,
 .main_course__card:hover > div + div .fa-check-circle,
@@ -511,34 +595,39 @@ form .bypass input {
   display: flex;
   flex-direction: column;
   padding: 10px 0 10px 10px;
+  width: 80%;
+  display: flow-root;
+  overflow: hidden;
+  font-weight: bold;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
 }
 .starter__desc__name,
 .main_course__desc__name,
 .dessert__desc__name {
-  white-space: nowrap;
+  display: flow-root;
+  overflow: hidden;
   font-weight: bold;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 .starter__desc__spec,
 .main_course__desc__spec,
 .dessert__desc__spec {
+  display: flow-root;
   overflow: hidden;
-  white-space: nowrap;
+  font-weight: bold;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 300;
   padding-top: 8px;
-  color: #4d4d4d;
+  font-size: 16px;
 }
 .starter__animation,
 .main_course__animation,
 .dessert__animation {
   display: flex;
-  position: relative;
+  position: absolute;
   right: -64px;
   transition: transform 400ms ease-in-out;
 }
@@ -546,7 +635,7 @@ form .bypass input {
 .main_course__price,
 .dessert__price {
   align-self: flex-end;
-  font-weight: bold;
+  font-weight: normal;
   padding-bottom: 10px;
   padding-right: 10px;
 }
@@ -569,46 +658,46 @@ form .bypass input {
 }
 
 .animation-1 {
-  animation: card-in 800ms 350ms ease-out forwards;
+  animation: arise 800ms 350ms ease-out forwards;
 }
 
 .animation-2 {
-  animation: card-in 800ms 700ms ease-out forwards;
+  animation: arise 800ms 700ms ease-out forwards;
 }
 
 .animation-3 {
-  animation: card-in 800ms 1050ms ease-out forwards;
+  animation: arise 800ms 1050ms ease-out forwards;
 }
 
 .animation-4 {
-  animation: card-in 800ms 1400ms ease-out forwards;
+  animation: arise 800ms 1400ms ease-out forwards;
 }
 
 .animation-5 {
-  animation: card-in 800ms 1750ms ease-out forwards;
+  animation: arise 800ms 1750ms ease-out forwards;
 }
 
 .animation-6 {
-  animation: card-in 800ms 2100ms ease-out forwards;
+  animation: arise 800ms 2100ms ease-out forwards;
 }
 
 .animation-7 {
-  animation: card-in 800ms 2450ms ease-out forwards;
+  animation: arise 800ms 2450ms ease-out forwards;
 }
 
 .animation-8 {
-  animation: card-in 800ms 2800ms ease-out forwards;
+  animation: arise 800ms 2800ms ease-out forwards;
 }
 
 .animation-9 {
-  animation: card-in 800ms 3150ms ease-out forwards;
+  animation: arise 800ms 3150ms ease-out forwards;
 }
 
 .animation-10 {
-  animation: card-in 800ms 3500ms ease-out forwards;
+  animation: arise 800ms 3500ms ease-out forwards;
 }
 
-@keyframes card-in {
+@keyframes arise {
   0% {
     opacity: 0.1;
     transform: translateY(15px);
