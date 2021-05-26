@@ -10,7 +10,7 @@ $font-stack-title: ("Shrikhand", "Arial", sans-serif);
 
 @mixin ellipsis {
   display: flow-root;
-  overflow: clip;
+  overflow: hidden;
   font-weight: bold;
   text-overflow: ellipsis;
   white-space: nowrap;

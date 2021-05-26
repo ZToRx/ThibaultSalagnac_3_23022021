@@ -597,7 +597,7 @@ form .bypass input {
   padding: 10px 0 10px 10px;
   width: 80%;
   display: flow-root;
-  overflow: clip;
+  overflow: hidden;
   font-weight: bold;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -606,7 +606,7 @@ form .bypass input {
 .main_course__desc__name,
 .dessert__desc__name {
   display: flow-root;
-  overflow: clip;
+  overflow: hidden;
   font-weight: bold;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -615,7 +615,7 @@ form .bypass input {
 .main_course__desc__spec,
 .dessert__desc__spec {
   display: flow-root;
-  overflow: clip;
+  overflow: hidden;
   font-weight: bold;
   text-overflow: ellipsis;
   white-space: nowrap;
