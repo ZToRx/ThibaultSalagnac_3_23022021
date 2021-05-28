@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed",
+=======
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+>>>>>>> develop
     "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
