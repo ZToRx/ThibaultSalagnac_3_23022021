@@ -91,7 +91,7 @@
     color: $color-primary;
     padding-right: 16px;
   }
-  & ol {
+  ol {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -181,7 +181,7 @@
     border-radius: 20px 20px 0 0;
     &--new {
       position: absolute;
-      right: 2vh;
+      right: 24px;
       top: 24px;
       z-index: 2;
       background-color: $color-tertiary;
@@ -201,7 +201,7 @@
     font-weight: bold;
     padding-bottom: 7px;
   }
-  & .fa-heart-o {
+  .fa-heart-o {
     position: relative;
     color: shade($color-white, 66);
     padding: 10px;
@@ -215,7 +215,7 @@
       }
     }
   }
-  & .fa-heart {
+  .fa-heart {
     position: absolute;
     left: 9px;
     top: 9px;

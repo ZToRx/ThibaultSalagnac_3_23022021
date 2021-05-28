@@ -1,14 +1,13 @@
-section {
+.restaurant {
   background: shade($color-white, 8);
-  & .showcase {
-    height: 40vh;
+  .showcase {
     overflow: hidden;
-    & img {
+    img {
       position: relative;
       width: 100%;
       object-fit: cover;
-      @include responsive-to(m) {
-        top: -100px;
+      @include responsive-to(s) {
+        top: -170px;
       }
       @include responsive-to(l) {
         top: -400px;
@@ -21,27 +20,27 @@ form {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: -290px;
+  top: -30px;
   border-radius: 30px 30px 0 0;
   background: shade($color-white, 8);
   padding: 15px;
-  @include responsive-to(xs){
-    top: -225px;
-  }
   @include responsive-to(s) {
-    top: -30px;
+    top: -200px;
+  }
+  @include responsive-to(l) {
+    top: -600px;
   }
   @include responsive-to(l) {
     display: grid;
     grid-template: 59px 1fr 136px / 1fr 1fr 1fr;
     column-gap: 20px;
   }
-  & .bypass {
+  .bypass {
     grid-column: 1 / 4;
     align-self: center;
     text-align: center;
     width: 100%;
-    & input {
+    input {
       width: 40vw;
       margin-top: 50px;
       margin-bottom: 40px;
@@ -57,7 +56,7 @@ form {
   font-family: $font-stack-title;
   font-size: 26px;
   padding-top: 15px;
-  & .fa-heart-o {
+  .fa-heart-o {
     position: relative;
     color: shade($color-white, 56);
     padding: 10px;
@@ -65,13 +64,13 @@ form {
     &:hover,
     :active,
     :visited {
-      & .fa-heart {
+      .fa-heart {
         opacity: 1;
         transform: scale(1);
       }
     }
   }
-  & .fa-heart {
+  .fa-heart {
     position: absolute;
     left: 9px;
     top: 9px;
@@ -116,10 +115,10 @@ form {
     border-radius: 15px;
     box-shadow: 2px 3px 10px shade($color-white, 16);
     &:hover > div + div {
-      position: relative;
-      @include responsive-to(s) {
-        position: absolute;
-      }
+        position: relative;
+        @include responsive-to(xs){
+          position: absolute;
+        }
       transform: translate(-64px, 0);
       & .fa-check-circle {
         transform: rotate(360deg);
@@ -146,7 +145,7 @@ form {
     display: flex;
     position: absolute;
     right: -64px;
-    transition: transform 400ms ease-in-out;
+    transition: transform 300ms ease-in-out;
   }
   &__price {
     align-self: flex-end;
@@ -183,5 +182,12 @@ form {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+#btn__order {
+  transition: transform 200ms;
+  &:hover {
+    transform: scale(1.1);
   }
 }

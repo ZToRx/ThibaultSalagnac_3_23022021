@@ -1,9 +1,13 @@
 .logo {
-  width: 10em;
-  padding-top: 3vh;
-  padding-bottom: 2vh;
-  &--small {
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+  img {
+    width: 10em;
+  }
+  &--small img{
     width: 5em;
     filter: invert(1);
   }
+  
 }

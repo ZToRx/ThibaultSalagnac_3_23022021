@@ -13,7 +13,7 @@
       src="https://kit.fontawesome.com/188897625e.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="./public/css/prefixed/style.css" />
     <title>OhMyFood! Paris</title>
   </head>
   <body>
@@ -21,11 +21,12 @@
       <div class="preloader"></div>
     </div>
     <header>
+      <div class="logo">
       <img
-        class="logo"
         src="./public/img/logo/ohmyfood.png"
         alt="logo de OhMyFood"
       />
+    </div>
     </header>
     <main>
       <div id="infoposition" class="infoposition">
@@ -42,7 +43,6 @@
             Découvrez des restaurants d'exception,<br />séléctionnés pas nos
             soins.
           </p>
-          <!-- CHANGER L'ADRESSE A LA MISE EN LIGNE-->
           <button
             class="btn btn__anchor"
             type="button"
@@ -144,11 +144,13 @@
       </section>
     </main>
     <footer>
+      <div class="logo logo--small">
       <img
         class="logo logo--small"
         src="./public/img/logo/ohmyfood.png"
         alt="logo de OhMyFood en petit"
       />
+    </div>
       <ul>
         <li>
           <a href="#"

@@ -1,13 +1,12 @@
 header {
-  position: relative;
+  display: flex;
   text-align: center;
-  height: 10vh;
+  height: 90px;
 }
 .fa-arrow-left {
-  position: absolute;
+  align-self: center;
   font-size: 1.2em;
-  left: 5vw;
-  padding-top: 3.8vh;
   color: shade($color-white, 70);
   text-decoration: none;
+  padding-left: 50px;
 }

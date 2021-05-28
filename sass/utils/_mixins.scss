@@ -1,0 +1,14 @@
+@mixin ellipsis {
+    display: flow-root;
+    overflow: hidden;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+@mixin responsive-to($size) {
+    @media screen and (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  }
+  

@@ -13,20 +13,21 @@
       src="https://kit.fontawesome.com/188897625e.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="./public/css/prefixed/style.css" />
     <title>OhMyFood! Paris - À la française</title>
   </head>
   <body>
     <header>
       <a class="fas fa-arrow-left" aria-hidden="true" href="./index.html">
       </a>
-      <img
-        class="logo"
-        src="./public/img/logo/ohmyfood.png"
-        alt="logo de OhMyFood"
-      />
-    </header>
-    <section>
+      <div class="logo">
+        <img
+          src="./public/img/logo/ohmyfood.png"
+          alt="logo de OhMyFood"
+        />
+      </div>
+      </header>
+    <main class="restaurant">
       <div class="showcase">
       <img
         src="./public/img/restaurants/a_la_francaise.jpg"
@@ -182,13 +183,15 @@
           </div>
         </div>
       </form>
-    </section>
+    </main>
     <footer>
+      <div class="logo logo--small">
       <img
         class="logo logo--small"
         src="./public/img/logo/ohmyfood.png"
         alt="logo de OhMyFood en petit"
       />
+    </div>
       <ul>
         <li>
           <a href="#"
@@ -206,7 +209,7 @@
           <a href="#">Mentions légales</a>
         </li>
         <li>
-          <a href="mailto:#">Contact</a>
+          <a href="mailto:contact@ohmyfood.fr">Contact</a>
         </li>
       </ul>
     </footer>

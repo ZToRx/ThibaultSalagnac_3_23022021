@@ -13,26 +13,27 @@
       src="https://kit.fontawesome.com/188897625e.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="./public/css/prefixed/style.css" />
     <title>OhMyFood! Paris - La note enchantée</title>
   </head>
   <body>
     <header>
       <a class="fas fa-arrow-left" aria-hidden="true" href="./index.html">
       </a>
-      <img
-        class="logo"
-        src="./public/img/logo/ohmyfood.png"
-        alt="logo de OhMyFood"
-      />
-    </header>
-    <section>
-      <div class="showcase">
+      <div class="logo">
+        <img
+          src="./public/img/logo/ohmyfood.png"
+          alt="logo de OhMyFood"
+        />
+      </div>
+      </header>
+      <main class="restaurant">
+        <div class="showcase">
       <img
         src="./public/img/restaurants/la_note_enchantee.jpg"
         alt="plat dans une petite assiette"
       />
-    </div>
+      </div>
       <form method="post" action="traitement.php">
         <div class="heading">
           <h1 class="heading__title">La note enchantée</h1>
@@ -194,14 +195,15 @@
           </div>
         </div>
       </form>
-    </section>
+    </main>
     <footer>
-      <img
-        class="logo logo--small"
-        src="./public/img/logo/ohmyfood.png"
-        alt="logo de OhMyFood en petit"
-      />
-      <ul>
+      <div class="logo logo--small">
+        <img
+          src="./public/img/logo/ohmyfood.png"
+          alt="logo de OhMyFood en petit"
+        />
+      </div>
+        <ul>
         <li>
           <a href="#"
             ><span class="fa fa-cutlery" aria-hidden="true"></span>Proposer un
@@ -218,7 +220,7 @@
           <a href="#">Mentions légales</a>
         </li>
         <li>
-          <a href="mailto:#">Contact</a>
+          <a href="mailto:contact@ohmyfood.fr">Contact</a>
         </li>
       </ul>
     </footer>

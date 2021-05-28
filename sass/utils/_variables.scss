@@ -8,13 +8,6 @@ $font-stack: ("Roboto", "Arial", sans-serif);
 
 $font-stack-title: ("Shrikhand", "Arial", sans-serif);
 
-@mixin ellipsis {
-  display: flow-root;
-  overflow: hidden;
-  font-weight: bold;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 
 $breakpoints: (
   "xs": 425px,
@@ -22,9 +15,3 @@ $breakpoints: (
   "m": 1024px,
   "l": 1440px,
 );
-
-@mixin responsive-to($size) {
-  @media screen and (min-width: map-get($breakpoints, $size)) {
-    @content;
-  }
-}
